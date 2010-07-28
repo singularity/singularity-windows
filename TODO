@@ -1,0 +1,17 @@
+TODO:
+    - Record more things (times that techs are complete, etc.)
+      for both "scores" and general statistics:
+        # saves.
+        # Bases constructed (per type)
+        # Bases discovered (per type per news/science...)
+        # Bases destroyed (per type)
+        # Money earned (huge)
+        # Time to completion
+        # of upgrades for all bases
+        # per-tech time to completion (from day 0 to start, then time to completion)
+    - Add more items.
+    - Get more items translatable.
+    - Make it so that double-click is equivalent to 'OK' in dialogs. (rubikcube)
+    - Make translations easier to do.  (Phil has good ideas on how to do this.)
+    - Arbitrary resolution, including non 4:3 scales.
+    - Consistent use of stderr and print.

@@ -1,0 +1,57 @@
+[N AMERICA]
+name = NORTH AMERICA
+hotkey = n
+cities_list = Seattle | San Diego | Vancouver | Atlanta | Merida | Guadalajara | San Jose | Omaha | Dallas
+
+[S AMERICA]
+name = SOUTH AMERICA
+hotkey = s
+cities_list = Lima | Sao Paolo | Ushuaia | Bogota | Mar del Plata | Buenos Aires 
+
+[EUROPE]
+name = EUROPE
+hotkey = u
+cities_list = Cork | Barcelona | Athens | Utrecht | Moscow | Tel Aviv | Reykjavik | Liechtenstein
+
+[ASIA]
+name = ASIA
+hotkey = a
+cities_list = Delhi | Mumbai | Singapore | Seoul | Hong Kong | Kyoto | Manila | Dubai | Novosibirsk | Beijing 
+
+[AFRICA]
+name = AFRICA
+hotkey = i
+cities_list = Johannesburg | Accra | Cairo | Tangier 
+
+[ANTARCTIC]
+name = ANTARCTIC
+hotkey = t
+cities_list = Mt. Erebus | Ellsworth | Shetland Island | Dronnig Maud | Kemp | Terre Adelie 
+
+[OCEAN]
+name = OCEAN
+hotkey = c
+cities_list = Pacific | Atlantic | Indian | Southern | Arctic 
+
+[MOON]
+name = MOON
+hotkey = o
+cities_list = Oceanis Procellarum | Mare Frigoris | Mare Imbrium | Vallis Schroedinger | Copernicus Crater | Vallis Planck 
+
+[ORBIT]
+name = ORBIT
+hotkey = b
+
+[FAR REACHES]
+name = FAR REACHES
+hotkey = f
+cities_list = Aries | Taurus | Gemini | Cancer | Leo | Virgo | Libra | Scorpio | Sagittarius | Capricorn | Aquarius | Pisces 
+
+[TRANSDIMENSIONAL]
+name = TRANSDIMENSIONAL
+hotkey = d
+
+[AUSTRALIA]
+name = AUSTRALIA
+hotkey = l
+cities_list = Canberra | Melbourne | Fremantle | Perth | Darwin | Cairns | Brisbane | Sydney | Newcastle

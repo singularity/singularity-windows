@@ -1,0 +1,467 @@
+Endgame: Singularity Changelog
+
+v0.30b (release 2010.07.28):
+
+USER-VISIBLE CHANGES:
+- --nosound properly ignores the sound system.(emh, Cyclotron / Daryl for bug
+  report)
+- Better appearance when no items will fit in the slot. (emh)
+- Knowledge screen is refreshed properly when loading a game. (emh)
+
+v0.30a (release 2010.02.06):
+
+USER-VISIBLE CHANGES:
+- Time Capsule English text no longer assumes the Antarctic. (Phil Bordelon,
+  Avaera8820 for bug report)
+- Game pauses when random events occur. (Phil Bordelon, captainsegfault for
+  bug report, justapawn for initial implementation)
+- Savefiles are now in sorted order instead of an arbitrary arrangement.
+  (remur_030)
+- Additional corrections to de_DE translation. (Christian Gerloff,
+  Developer-KI)
+- Really make the Projects do something. (Phil, WvWisokee for bug report)
+- "news" and "media" are only synonyms to humans.  (FM, captainsegfault for bug
+  report)
+- Support the Delete and Keypad Enter keys properly. (Phil, Yoshi for bug
+  report)
+- Stopped building additional CPUs from refunding the money previously paid.
+  (FM, Yoshi for bug report)
+- Location name fix. (Phil, pederick for bug report)
+- Fix a crash with handling scrollbars. (Phil, netantho for bug report)
+- Fix a bug where the finance report wouldn't always display. (Raymond
+  Martinau)
+- Updated (but not fully complete) es_AR translation. (Guga)
+* New it_IT translation. (Daniele Sapino)
+- Fixed a bug where building 0 CPUs made the game crash whenever time was
+  unpaused.  (FM, don.ridge for bug report)
+- Font sizing has been improved.  Most dialogs should no longer appear
+  "bloated".  (FM, Gastón Alonso for bug report)
+
+v0.30 (release 2009.01.26):
+
+[Note that this release explicitly removes support for all savefile formats
+ before 0.28/0.28a.]
+
+USER-VISIBLE CHANGES:
+* Complete rewrite of the graphics system, shiny new widgets and dialogs.
+  Arbitrary resolutions now supported. (FM)
+- Fix to de_DE intro text. (booiiing)
+* Individual bases no longer have their own tasks, only a power state.
+  The research dialog has been substantially improved to compensate. (FM)
+* When building or researching, CPU, cash, and labor (time) must be spent in
+  approximately equivalent amounts. (FM)
+* The AI has learned to estimate how quickly its bases are detected. (FM)
+- The AI pays no attention to the humans until they notice his actions. (FM)
+- Color-coding has been added to the AI's global estimates. (FM)
+- Winning the game has become more permanent. (FM)
+- Events no longer happen when they're meaningless. (FM)
+* The AI has discovered a network of light sensors around the globe.  You can
+  now see day and night on the map. (dvrasp, FM, Anne M. Archibald)
+* Added support for running the game on an OLPC XO-1. (FM)
+* fr_FR translation (Philippe Grenard)
+- Make two Projects that didn't do anything before actually do something.
+  (Phil, FM for bug report)
+* Reduced the number of savefile formats supported, but make attempts to load
+  bad saves less problematic. (Phil)
+
+
+OTHER CHANGES:
+- Removed a redundant tech requirement. (Phil, Xombie for bug report)
+- Major efficiency improvements. (FM)
+- New utility, make-tree.py.  Uses graphviz to create a visualization of the
+  tech tree. (aes, FM)
+
+v0.28a (release 2008.05.12):
+
+USER-VISIBLE CHANGES:
+* Three new win/loss tracks for the game, including the Psycle source! (Max
+  McCracken)
+
+OTHER CHANGES:
+- Error logs are handled more sanely on *NIX systems. (Phil, kaol and FM for
+  the idea)
+- Replaced Bitstream Vera Sans with DejaVu Sans to facilitate future
+  translations. (Phil)
+- Localization fix for locales with non-ASCII number formats. (FM, 
+  Henrik Phil for bug report)
+
+v0.28 (release 2008.05.11):
+
+USER-VISIBLE CHANGES:
+- Minor text cleanups. (Phil, FM; Cory Hickey and gglouser for some fixes)
+- Minor dialog behavior fixes. (FM)
+* New non-research task: CPU Pool.  Performs maintenance, construction, jobs.
+  Bases with no other task assigned will contribute to the CPU Pool. (FM)
+* New non-research task: Sleep.  Bases assigned to Sleep will remain idle and
+  be harder to detect.  Note that even a computer can't sleep through
+  construction. (FM)
+- The CHANGE buttons inside the base dialog now show their hotkeys. (FM)
+- The location buttons have had their on-screen positions tweaked. (FM)
+- Start location is randomized to any of the 5 available continents. (FM)
+* CPU is now used to design constructions, Cash to buy the required items, and
+  Labor (time) to assemble the final construction. (FM)
+- Location and city names can now be localized. (FM)
+- Numbers automatically localize to the correct comma-vs-period usage. (FM)
+* Added a new difficulty level: Ultra Hard. (FM, emh for suggestion)
+* Build times are now difficulty-dependent. (FM)
+* The grace period applied to a new base is now difficulty-dependent. (FM)
+* The suspicion gain per discovery is now difficulty-dependent. (FM)
+- Bases in a location are now sorted by size, then name. (FM, emh for
+  suggestion)
+* The global grace period now expires on Normal and above if you build more
+  than a certain number of bases, and on Ultra Hard if you build certain types
+  of bases. (FM)
+- Locations with recently-discovered bases are now more likely to have other
+  bases discovered. (FM)
+* Base detection chances and overall suspicion are now unknown until certain
+  new technologies have been researched. (Phil)
+  ...except on low difficulty. (FM)
+* Incomplete bases no longer support the AI. (FM)
+- It's possible to get lucky when hacking some random computer.  (FM)
+* Seconds, minutes, and hours now matter much more than they used to. (FM)
+- Major events cause the game to pause, instead of going to real-time. (FM)
+- You can use the Enter on the numeric keypad like the regular Enter key.
+  (Phil, gare for suggestion)
+* Continents are no longer identical. (FM, Phil for suggestion)
+* New continent: Australia.  Ocean moved to make room. (FM)
+* E:S now has an intro when you start a new game! (FM)
+- New item: Warning Signs.  Useful for keeping out curious people. (FM)
+- CPU display on Finance screen centered (Jorge Vargas)
+- Time capsules can now be built anywhere sufficiently remote, with varying
+  degrees of stealth. (FM, emh for suggestion)
+- Internet Traffic Manipulation and Hypnosis Field techs have been rebalanced to
+  better reflect their effects. (FM)
+* de_DE translation (FM, Thomas for native proofing [still in progress])
+* sv_SE translation (Anders Andersson)
+
+OTHER CHANGES:
+- Massive (~50%) code changes, to improve clarity and reduce duplication. (FM)
+- "safety" module should trap most crash bugs and show the pause menu, allowing
+  the user to save or attempt to resume play; the errors are written to a log
+  for easy submission to the developers. (FM)
+- New utility: reorder.py  Workaround for traduko's current order-scrambling
+  behavior.  Use with caution. (FM)
+- Various code formatting fixes, refactor of part of the technology(/event)
+  result system. (Jorge Vargas)
+- setup.py updated to support mac .app building and cut filesize of the windows
+  .exe by about half. (FM)
+
+v0.27 (release 2008.04.17):
+
+USER-VISIBLE CHANGES:
+- Display the actual discovery percentage when preparing to build a base.
+  (Brian, Phil)
+- Minor text cleanups. (Phil)
+* Support events that can happen throughout the course of the game, changing
+  things in interesting ways. (Brian, Phil)
+* A number of new items and technologies to ease gameplay. (Brian, tweaks
+  by Phil and emh)
+- Building new machines informs you how much CPU capacity you will receive
+  from the new systems. (Brian, Phil for suggestion)
+- Idle bases are harder to discover. (Brian)
+- Allow keys to be repeated when held down. (Brian, emh for suggestion)
+- Fix the constant "CPU complete" dialogs when low on money. (Brian, numerous
+  people for suggestion)
+- Added research item for construction. Still needs actual implementation.
+  Weird time code is blocking. (Brian, ? for suggestion)
+- Return to base menu when exiting base screens rather than returning to map.
+  (Brian, emh and Max McCracken for suggestion)
+- Implemented Security and Reactor values obtained from data files. (Brian)
+- Implemented "Destroy" feature from base list (Brian, Max McCracken and emh
+  for suggestion)
+- When building, items are sorted by their cost to make picking the best one
+  easier. (Phil, Gustav Bertram for suggestion)
+- Keep the game from crashing when it cannot create a 'music/' directory.
+  (Phil, Andrew McMillan for report)
+- Added checks to avoid key error crashes related to unfinished Construction
+  code. (Brian)
+- Added check to avoid crash when hitting 'Destroy' button in an empty base
+  list. (Brian)
+- Preferences have moved to 'prefs.dat', and now follow the standard Python
+  ConfigParser format. (Phil)
+- Increased robustness across the board; E:S should be harder to crash.
+  (Phil)
+- Various strings shortened to fit dialogs. (Phil, Joey Hess for suggestion)
+- Fixed bug that kept music from playing. (Phil, Brian Warner for suggestion)
+- Keep running if the mixer can't load. (Phil, Rafal Czlonka for bug report)
+- Fix up the handling of music paths. (Phil)
+- Added support for win and losegame music. (emh)
+* Three new tracks, 'Deprecation', 'Awakening,' and 'Inevitable,' including
+  the Psycle source! (Max McCracken)
+- Research screen will no longer assign an extra base to research. (emh,
+  blog... for report)
+- When naming base, text will take up the entire box. (emh, blog... for report)
+- Fixed a potential crash with display_base_list self-recursing. (Phil,
+  Josh Triplett for report)
+
+OTHER CHANGES:
+- Code cleanups and reformatting. (Phil)
+- Cleanup a bug introduced in player.py, item may be int rather than object.
+  (Brian)
+- The music loading code is less fragile now; it shouldn't break on too-short
+  file names. (Phil)
+- Massive changes to data file handling; we now use Python's built-in
+  ConfigParser. (Phil)
+- Further changes to the data file formats, for consistency and ease of
+  code/data maintenance.  (Phil)
+- Switched sounds to using data files, for smoother future expansion. (Phil)
+- Fixed strings loading. (Phil)
+
+v0.26a (released 2007.08.12):
+
+USER-VISIBLE CHANGES:
+- Made Very Easy mode actually playable. (Phil, Simon Goodall for bug
+  report.)
+
+v0.26 (released 2007.08.09):
+  [Note that the official Endgame: Singularity soundtrack is released
+   separately from the game. It can be found at the official website:
+      http://emhsoft.com/singularity/
+   In addition, user-added tracks are also supported.  See the README
+   for details.]
+
+USER-VISIBLE CHANGES:
+- Added CPU indicator to the main screen. (emh, John DiMarco for suggestion)
+- Research screen will now automatically prune bases. (emh, John DiMarco
+  for suggestion)
+- Fixed slight flicker when toggling options. (emh)
+* Added difficulty selection. (emh, many people for suggestion)
+* Added simple background music playing ability. (emh, Matthew Robinson for
+  initial patch.)
+- Single-CPU bases have CPU power listed. (emh, robaal for suggestion)
+* Delicious retro-futuristic music specially made for Endgame: Singularity,
+  including the Psycle source for the tracks! (Max McCracken)
+- License change of the various data that the developers control to BY-SA
+  3.0 (from BY-SA 2.5).  (Phil, emh)
+- License change of the Acknowledge font to 'free to use for any purpose;'
+  thanks so much, Brian Kent! (Phil, Brian Kent)
+
+OTHER CHANGES:
+- Changed data-loading code to use UTF. (biro.daniel for patch)
+
+v0.25 (released 2006.08.10):
+
+USER-VISIBLE CHANGES:
+* There is now a py2exe version available for Windows, which does not
+  require installation of any other software. (emh)
+- Default language changeable via option screen. (emh)
+- Finance screen shows CPU usage now. (emh, multiple people for suggestion)
+- Options screen can be accessed after game start. (emh)
+- Changing the language from the option screen works now. (emh)
+- New item/techs. (emh, editing by Phil)
+- Add up free CPU properly, for use in maintenance. (emh, bugreport by Simon Goodall)
+- Change starting bases/cash. (emh)
+- Save directory will be created in the right place now. (emh)
+- True cost of constructing CPU items is now displayed. (emh)
+- Future cost of techs displayed properly when multiple bases are working. (emh)
+
+OTHER CHANGES:
+- Deleted some extraneous images and optimized some others. (Phil)
+- Cleaned up formatting in g.py. (emh)
+
+v0.24 (released 2006.07.13):
+
+USER-VISIBLE CHANGES:
+- The Page Up, Page Down, Home, and End keys work in all listboxes. (emh)
+- Modified money displays to keep them from overflowing. (Phil)
+* Suspicion loss is now quadratic; different groups "forget" quicker.
+  (Phil, Ticho for the suggestion)
+* There are now restrictions on the building of items. (emh)
+- Fixed a couple scrollbars that weren't working right. (emh)
+- Spruced up text. (Phil)
+- Fixed a bug with the item cost display. (Phil)
+- Fixed a bug when running in NetBSD. (emh, reported by Reno Reckling)
+* More items/techs. (emh)
+* Bases can now be lost due to disrepair. (emh)
+* Added ability to examine items and techs. (emh)
+- Added in-game "help" in the form of information on various concepts.
+  (emh, tweaks by Phil)
+* Added preference system. (emh)
+- Updated es_AR translation. (Borg[MDQ])
+
+v0.23a (released 2006.03.08):
+
+USER-VISIBLE CHANGES:
+* Save/load works on Windows again. (emh, rspoerri for bug report)
+- Updated option help (emh)
+
+v0.23 (released 2006.03.06):
+
+USER-VISIBLE CHANGES:
+- Fixed bug that allowed access to uncompleted bases. (emh, Borg[MDQ] for
+  report)
+* Added ability to destroy bases. (emh, multiple people for suggestion)
+* Reduced (real-world) processor usage. (emh, anonymous for suggestion)
+- Moved savefile location to ~/.endgame/saves (emh, Nescius for patch)
+* Added finance screen. (emh, many for suggestion)
+- Construction time bonus actually works now. (emh)
+- More numbers use commas now. (emh)
+- Increased cost of clusters. (emh)
+- Adjusted button positions for greater usability. (Phil)
+- Minor typo fixes and tightened grammar. (Phil)
+* Further massive reduction in processor usage using new Clock class. (Phil,
+  Adam Bark for original patch)
+- Can destroy bases under construction. (emh, Tim Freeman for suggestion)
+- Bases under construction are no longer protected indefinitely from being
+  discovered. (emh, Tim Freeman for noting problem)
+- Automatically bump machines working jobs to new job levels when they are
+  researched. (emh, Phil for suggestion :)
+- Tweak Suspicion and Detection displays for readability. (Phil)
+- Move around the various displays on the base screen for parity with the map
+  screen. (Phil)
+- Display the name of the base at the top of the base screen. (Phil,
+  Ticho for suggestion)
+- Reduce discovery chance to 0% after the game is won. (Phil, Szabó Roland for
+  suggestion)
+- Properly localize win screen. (Phil)
+* Right-click will exit from all menus. (emh, mandos for suggestion)
+- Warn players when research selected on the Research screen will not use all
+  available CPU. (Phil, mandos for suggestion)
+- Note bases that are under construction in the base list. (emh, Ticho for
+  suggestion)
+- Display the right construction time for items when you have technologies
+  that speed up construction. (emh)
+- Items will no longer give benefits while under construction. (emh)
+
+OTHER CHANGES:
+- Centralized some of the button code. (emh)
+- Tightened up the save/load functions to allow for better save compatibility.
+  (emh)
+- Add_commas works better with negative numbers. (emh)
+- Minor code cleanups. (Phil)
+- Convert Evil Tabs in source to (4) spaces.  Code should be easier to read and
+  edit now.  (emh)
+- Changed savefile signature string to be less release-version based, now that
+  the format is churning a lot less. (Phil)
+- Fix clock code to handle "didn't run fast enough" properly. (Phil, mandos
+  for suggestion)
+- Fix clock code to actually return the time spent running; this allows us to
+  change all clock usage to the new, uses-almost-no-CPU clock code. (Phil)
+
+v0.22 (released 2005.10.05):
+  [To read about the save file compatibility policy, please see README.txt.]
+  NOTE: Save files from versions 0.21 and above should work.  Save files from
+  versions 0.20 and before will not work.
+
+- At the start, money gains a minimal amount of interest (as opposed to none).
+  (Phil)
+- Make the 'change research' button more obvious. (Phil)
+- Change the way that technologies/items are stored.  There is now a separate text
+  file detailing the technology tree, and another with all of the text
+  strings.  This will allow localization of the technologies. (emh)
+- When technologies are completed, we can now display a string detailing the
+  result. (emh)
+- Complete rewrite of technology descriptions, better matching the new names.
+  (Phil)
+- Minor cleanup of base descriptions. (Phil)
+- New default font (Bitstream Vera Sans), especially useful for systems that
+  don't have a default Pygame font for some reason (emh; reported by Brian
+  Ropers-Huilman)
+- Hotkeys for the various speed settings (1-4). (emh)
+- Call the 'per day' code for however many days is necessary since the last
+  call. (emh)
+- Change the grace period for bases to start when construction is complete.
+  (emh)
+- Keys can repeat/mouse can be used when in textboxes. (emh, Phil)
+- Reduce discovery chances for most agencies for most bases. (Phil)
+- Added a new cheat. (Phil)
+- Fixed tech studying when money is needed. (emh)
+- Added next/prev base buttons. (emh, Borg[MDQ] for suggestion)
+- es_AR translation (our first!) (Borg[MDQ], very minor fixups by Phil)
+- Moved more things into data files. (emh)
+- Flavored names and numbers for the bases. (idea by heatsink, implementation
+  by emh and Phil)
+- Translation-related crash fix. (emh)
+- Global Research Screen; allows changing research for all bases. (emh, very
+  minor fixups by Phil)
+- Items give dialog upon completion. (emh; Jens Becker for suggestion)
+- Expanded a few listboxes in order to fit the larger base names/techs. (emh)
+- Various and sundry bugfixes across old and new code. (emh, Phil)
+
+v0.21a (released 2005.09.19):
+- Added '.sav' extension to new save files.  Old ones will still load, but
+  they will save with a .sav extension, and the old save will not be used
+  any more. (Phil)
+- Fixed loading 0.20 saves with technologies currently being researched. (emh)
+
+v0.21 (released 2005.09.19):
+- Game will not crash when building a base or item in rare circumstances.
+  (emh; Christan Brink (among others) for bug report)
+- Fixed a few broken keyboard shortcuts, and redid the code to make this bug
+  harder to create. (emh)
+- Renamed almost all technologies. (Phil)
+  [NOTE: The descriptions of the technologies have not yet been changed to
+  match their new names.  This will be done by the next release.]
+- Various typos. (Phil)
+- The current speed will be highlighted. (emh; solitonwave Borg for suggestion)
+- Changed endgame tech name. (emh; Daniel Radetsky for suggestion)
+- Simplified savegame format. (emh; anonymous for suggestion)
+- Fixed crash when loading a game, then starting a new game. (emh)
+
+v0.20 (released 2005.09.14):
+- Adjusted the README. (Phil)
+- Added suspicion display. (emh)
+- Slow time back to normal when a base is discovered. (emh)
+- Redid base display. (emh)
+- All clicks only accept the left mouse button. (emh)
+- Scrollwheel works. (emh)
+- Balancing. (emh)
+- Various bugfixes. (Phil, emh)
+- Future cash is displayed next to current cash. (emh)
+- Code refactoring. (Phil)
+- Bases and savegames can be named. (Phil, emh)
+- Default base names are unique. (Phil)
+- Suspicion reduces automatically over time. (Phil)
+- Reduced cost for reactors and fields. (emh)
+- Bases now have a 14-day grace period before they can be discovered. (emh)
+- New technology. (emh)
+- Various typo fixes. (Phil, emh)
+
+v0.16 (released 2005.09.12):
+- Moved code to subdirectory.
+- Added Changelog/AUTHOR files (Phil Bordelon)
+- Research and jobs are displayed better. (Phil Bordelon)
+- Fixed job crash bug. (Phil Bordelon)
+- Current research is listed next to the base name.
+- Invisible buttons cannot be clicked anymore.
+- Bases can be discovered/the game can be lost.
+
+v0.15 (released 2005.09.11):
+- Slight performance increase.
+- Added help text for researching nothing.
+- Added some sound.
+- Covert bases are now constructable.
+- Locations will only show up if bases are constructable there.
+- Jobs added.
+
+v0.14 (released 2005.09.10):
+- Fixed a crash when building some bases. (Phil Bordelon)
+- Reduced speed when completing research and bases. (Phil Bordelon)
+- Savegames will properly store research cost. (Phil Bordelon)
+- The "Build Item" screen will only come up once.
+- Fixed overpaying for bases.
+- Construction of bases that require CPU time is now possible.
+- Maintenance costs for bases correctly taken.
+
+v0.13 (released 2005.09.09):
+- Bases give a notification when completed.
+- Fixed a few spelling mistakes. (Phil Bordelon)
+- Fixed a crash. (Phil Bordelon)
+
+v0.12 (released 2005.09.08):
+- Number of bases for each location listed on world map.
+- Closing game window from map or base screens no longer results in a traceback.
+- Buttons light up when hovered over.
+- Fixed crash from undefined tech.
+
+v0.11 (released 2005.09.05):
+- Saving/loading.
+- Game will no longer crash in listboxes when choosing a blank item.
+- Long listboxes handle clicking correctly.
+- Fixed crash related to building new bases.
+- Shortcut for building base items works.
+- Shortcut for building new bases added.
+- Network items work now.
+
+v0.10 (released 2005.09.03):
+- Initial release.
